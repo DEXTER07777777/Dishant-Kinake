@@ -1,0 +1,167 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+.intro {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff0066, #6600ff, #00ffcc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    flex-direction: column;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.intro-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.intro-content p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    padding: 2rem;
+    background: linear-gradient(135deg, #000, #333);
+    margin: 1rem 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2, h3 {
+    color: #ffcc00;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+.service, .project {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #222, #555);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.service:hover, .project:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 0.5rem;
+}
+
+form input, form textarea {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+form input[type="submit"] {
+    margin-top: 1rem;
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background: #ff3300;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .service, .project {
+        padding: 1rem;
+    }
+
+    form input, form textarea {
+        width: 100%;
+    }
+
+    .intro-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-content p {
+        font-size: 1.25rem;
+    }
+}
